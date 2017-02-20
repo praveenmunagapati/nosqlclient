@@ -1,0 +1,47 @@
+<template name="replicaManagement">
+    {{> pageHeading title='File Management' }}
+
+    {{#if isConnected}}
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row m-b-lg m-t-lg">
+                <div class="col-md-6">
+                    <div class="profile-info">
+                        <div class="">
+                            <div>
+                                <h2 id="replSetName" class="no-margins"></h2>
+                                <h4 id="replSetDate"></h4>
+                                <small id="replSetInfo"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <table class="table small m-b-xs">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <strong id="replSetDurableOpTime"></strong> Durable Op. Time
+                            </td>
+                            <td>
+                                <strong id="replSetLastCommittedOpTime"></strong> Last Committed Op. Time
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong id="replSetLastReadConcernMajorityOpTime"></strong> Read Concern Majority Op.
+                                Time
+                            </td>
+                            <td>
+                                <strong id="replSetAppliedOpTime"></strong> Applied Op. Time
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    {{/if}}
+</template>
